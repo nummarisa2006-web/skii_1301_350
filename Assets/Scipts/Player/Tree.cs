@@ -25,6 +25,14 @@ public class Tree : MonoBehaviour
             return;
 
         player.hp -= 15;
+
+        UIManager.Instance.ShowNotiText($"Hurt -15\nHp: {player.HP}");
+
+        if (player.HP <=0)
+        {
+            player.hp = 0;
+            UIManager.Instance.ShowNotiText($"You are dead!\nYour hp is: {player.HP}");
+        }    
     }
 
     private void OnCollisionExit(Collision collision)
