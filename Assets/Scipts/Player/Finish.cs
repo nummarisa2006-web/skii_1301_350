@@ -1,14 +1,20 @@
+using System;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Finish : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    [SerializeField]
+    private GameObject gameOverScreen;
+
+    public static Finish Instance;
+
     void Start()
     {
         
     }
 
-    // Update is called once per frame
+   
     void Update()
     {
         
@@ -21,6 +27,14 @@ public class Finish : MonoBehaviour
         if(p == null)
             return;
 
-        UIManager.Instance.ShowNotiText($"You Win!!!!!\nPoint: {p.Point}");
+        UIManager.Instance.ShowNotiText($"You Win!!!!! \nHp : {p.HP} \nPoint: {p.Point}");
+        Time.timeScale = 0;
+    }
+
+    public void ShowHideGameOverScreen(bool flag)
+    {
+        gameOverScreen.SetActive(flag);
+        return;
     }
 }
+

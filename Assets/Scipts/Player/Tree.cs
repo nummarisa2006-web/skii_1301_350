@@ -24,13 +24,13 @@ public class Tree : MonoBehaviour
         if (player == null)
             return;
 
-        player.hp -= 15;
+        player.HP -= 15;
 
         UIManager.Instance.ShowNotiText($"Hurt -15\nHp: {player.HP}");
 
         if (player.HP <=0)
         {
-            player.hp = 0;
+            player.HP = 0;
             UIManager.Instance.ShowNotiText($"You are dead!\nYour hp is: {player.HP}");
             Time.timeScale = 0f;
             UIManager.Instance.ShowHideRestartButton(true);

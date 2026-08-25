@@ -43,7 +43,7 @@ public class UIManager : MonoBehaviour
         player.HP = 100;
         ShowNotiText("Restart");
         Time.timeScale = 1f;
-       ShowHideRestartButton(false);
+        ShowHideRestartButton(false);
     }
 
     public void ShowHideRestartButton(bool flag)

@@ -20,6 +20,7 @@ public class Player : MonoBehaviour
     public int hp;
 
     public int HP { get { return hp; } set { hp = value; } }
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
